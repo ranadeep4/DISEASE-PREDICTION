@@ -3,12 +3,8 @@ services:
     name: disease-prediction-api
     env: python
     plan: free
-    buildCommand: |
-      pip install -r requirements.txt
-      python -c "from src.train import train_and_save_model; train_and_save_model()"
-    startCommand: cd app && gunicorn app:app --bind 0.0.0.0:$PORT --workers 1
+    buildCommand: pip install -r requirements.txt
+    startCommand: python app/app.py
     envVars:
       - key: PYTHON_VERSION
-        value: 3.9.16
-      - key: PYTHONPATH
-        value: . 
+        value: 3.9.16 
