@@ -1,0 +1,12 @@
+fastapi
+uvicorn
+scikit-learn
+pandas
+numpy
+joblib
+gunicorn==21.2.0
+flask-cors==4.0.0
+python-dotenv==1.0.0 
+matplotlib
+seaborn
+xgboost
